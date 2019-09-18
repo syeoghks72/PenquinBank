@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/* 공통 */
+.tabWrap {
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+.tabWrap .tabLine {
+	overflow: hidden;
+    height: 50px;
+}
+.tabWrap .tabLine li {
+    float: left;
+    text-align:center;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    background-color: #f3f3f3;
+}
+
+.tabWrap .tabLine li:first-child{
+	border-left: 1px solid #eee;
+}
+.tabWrap .tabLine li:last-child{
+	border-right: 1px solid #eee;
+}
+.tabWrap .tabLine li.active {
+    background-color: #FFFFFF;
+    border-top: 2px solid dodgerblue;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.tabContentWrap {
+	width: 756px;
+    margin-left: 40px;
+    background-color: #FFFFFF;
+    padding: 40px;
+}
+.tabContentWrap .tabContent ul{
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+.tabContentWrap .tabContent ul li {
+    padding: 30px;
+    border-bottom:1px solid #eee;
+}
+.tabContentWrap .tabContent ul li a{
+    color: #333;
+}
+.tabContent .hideContent{
+	display: none;
+	padding: 20px;
+    margin-top: 20px;
+}
+.tabContentWrap .tabContent ul li.tabList{
+    cursor: pointer;	
+}
+.tabContentWrap .tabContent ul .tabList p.selected{
+    background-color: #eee;
+    padding: 20px;
+}
+
+/*  자주묻는질문 */
+#faqSection .tabWrap .tabLine li {
+	width: 151px;	
+}
+
+/* 이용가이드 */
+#userGuideSection .tabWrap .tabLine li {
+	width: 188px;
+}
+
+/* 민원접수 */
+#complaintsReceivedSection .tabWrap .tabLine li {
+	width: 377px;
+}
+
+/* 이벤트 */
+#eventSection .tabWrap .tabLine li {
+	width: 377px;
+}
+
+/* 복리자유적금 */
+#freeFundsSection .tabWrap .tabLine li {
+	width: 188px;
+}
+	
+
+/* 마이페이지 */
+#myinfoSection .tabWrap .tabLine li {
+	width: 200px;
+}
+.sideMenuContainer .menu { 
+    position: relative;
+    width: 180px;
+    padding: 10px;
+    border: 2px solid dodgerblue;
+    margin: 0;
+    z-index: 2;
+} 
+.sideMenuContainer .menu .menuitem a{ 
+	display: block;
+    height: 4em;
+    line-height: 3.5em;
+    padding: 0 1em;
+    color: #000;
+    font-size: 16px;
+} 
+.sideMenuContainer .menu .menuitem a:hover {
+	 color: dodgerblue; 
+} 
+.sideMenuContainer .slidingBar { 
+	position: absolute; 
+	background-color: #ecf5ff; 
+	transition: all .2s ease; 
+	z-index: 1; 
+	opacity: 0; 
+	cursor: pointer;
+}
+
+
+/* 서브 메뉴 */
+.menu-fancy {
+	padding: 0 20px 70px 0;
+}
+.menu-fancy li {
+	position: relative;
+    margin: 0 5px;
+    width: 150px;
+    font-size: 20px;
+	color: dodgerblue;
+	display: inline-block;
+	text-align: center;
+    margin: 0 20px 0 0;
+	padding: 10px 0;
+}
+.menu-fancy li a {
+  padding: 0.5rem 0;
+  color: dodgerblue;
+}
+
+.menu-fancy li:after,
+.menu-fancy li:before,
+.menu-fancy a:before,
+.menu-fancy a:after {
+  position: absolute;
+  content: '';
+  border-radius: 4px;
+}
+
+.menu-fancy li:after,
+.menu-fancy li:before {
+  bottom: -4px;
+  height: 4px;
+}
+
+.menu-fancy li:not(.is-selected):before {
+  left: 0;
+  right: -2px;
+}
+
+.menu-fancy li.is-selected:after {
+  left: 0;
+  right: 39px;
+}
+
+.menu-fancy li.is-selected:before {
+  right: -2px;
+  width: 13px;
+}
+
+.menu-fancy .is-selected a:before {
+  height: 22px;
+  width: 4px;
+  bottom: -22px;
+  right: 7px;
+}
+
+.menu-fancy .is-selected a:after {
+  height: 4px;
+  width: 40px;
+  bottom: -13px;
+  right: 5px;
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.menu-fancy .menu-fancy-option1 a:hover {
+  color: dodgerblue;
+}
+
+.menu-fancy .menu-fancy-option1:after,
+.menu-fancy .menu-fancy-option1:before,
+.menu-fancy .menu-fancy-option1 a:after,
+.menu-fancy .menu-fancy-option1 a:before {
+  background-color: dodgerblue;
+}
+
+.menu-fancy .menu-fancy-option2 a:hover {
+  color: dodgerblue;
+}
+
+.menu-fancy .menu-fancy-option2:after,
+.menu-fancy .menu-fancy-option2:before,
+.menu-fancy .menu-fancy-option2 a:after,
+.menu-fancy .menu-fancy-option2 a:before {
+  background-color: dodgerblue;
+}
+

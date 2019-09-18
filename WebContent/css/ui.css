@@ -1,0 +1,533 @@
+@charset "utf-8";
+
+
+/* text point */
+.purplePoint {
+    color: dodgerblue;
+    font-size: 18px;
+    font-weight: bold;
+}
+.blackPoint {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+.bigPoint {
+	font-size: 26px;
+	line-height: 34px;
+	color: #333;
+	text-align: center;
+	font-weight: bold;
+}
+.numberPoint {
+	font-size: 40px;
+    color: dodgerblue;
+    font-weight: bold;
+    padding: 30px 0;
+}
+.whiteBigPoint {
+	font-size: 26px;
+	line-height: 34px;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+.strong {
+    font-weight: bold;
+	color: #333;
+	font-size: 18px;
+}
+.small {
+	font-size: 12px;
+}
+.descInfo{
+	font-size: 12px;
+	line-height: 20px;
+	color: #999;
+}
+.mainColor, 
+.active {
+	color: dodgerblue;
+}
+.red {
+	color: red;
+}
+.grey{
+	color: #999;
+}
+.lightgrey {
+	color : #eee;
+}
+.black {
+	color: #333;
+}
+.white {
+	color: white;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* date */
+.time, .date {
+	color: #999;
+    font-size: 12px;
+}
+
+/* shape */
+.circle {
+	padding: 5px;
+    border-radius: 40px;
+    margin: 0 auto;
+    width: 50px;
+}
+
+/* form */
+.formWrap {
+	padding: 50px;
+}
+.formWrap .formLeftWrap,
+.formWrap .formRightWrap {
+	width: 45%;
+}
+.formWrap .formLeftWrap {
+	padding-right: 50px;
+	border-right: 1px solid black;
+}
+
+
+/* box */
+.boxWrap .boxRecord {
+	overflow: hidden;
+}
+.box {
+	border: 1px solid #eee;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.boxWrap img{
+	width: 100%;
+}
+.lastBox {
+	margin: 0;
+}
+
+/* border */
+.blackBorder {
+	border: 1px solid black;
+}
+.border {
+	border: 1px solid #eee;
+}
+.noBorder {
+	border: none;
+}
+
+/* textarea */
+textarea {
+	width: 100%;
+	height: 125px;
+	padding: 20px;
+	border: 1px solid #eee;
+	resize: none;
+	font-size: 12px;
+	color: #999;
+	line-height: 20px;
+  	box-sizing: border-box;
+}   
+
+.noticeWriteTextarea {
+	width: 100%;
+    height: 500px;
+    padding: 20px;
+    border: 1px solid #eee;
+    resize: none;
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+    box-sizing: border-box;
+}   
+
+
+/* bg */
+.bgJamong { background-color: #f86680 }
+.bgGrey { background-color: #f9f9f9 }
+.bgWhite { background-color: white }
+.bgSoftPurple { background-color: #ecf5ff }
+.bgPurple { background-color: dodgerblue }
+
+
+/* bank button */
+.bankBtn {
+    border: 1px solid #eee;
+	padding: 10px 20px;
+	width: 168px;
+    height: 50px;
+    color: #999;
+    font-size: 16px;
+    line-height: 24px;
+	transition: 0.3s;
+	text-align: center;
+	padding-left: 10%;
+}
+.bankBtn:hover {
+	border: 1px solid dodgerblue;
+	cursor: pointer;
+}
+.clicked {
+	border: 1px solid dodgerblue;
+}
+#pq {
+	background: url('../images/icon/pbIcon.png');
+	background-size: 14%;
+	background-position: 30px 15px;
+	background-repeat: no-repeat;
+}
+#sh {
+	background: url('../images/icon/shinhanIcon.png');
+	background-size: 14%;
+	background-position: 30px 13px;
+	background-repeat: no-repeat;
+}
+#kb {
+	background: url('../images/icon/kbIcon.png');
+	background-size: 15%;
+	background-position: 30px 15px;
+	background-repeat: no-repeat;
+}
+#woori {
+	background: url('../images/icon/wooriIcon.png');
+	background-size: 14%;
+	background-position: 30px 13px;
+	background-repeat: no-repeat;
+}
+#nh {
+	background: url('../images/icon/nhIcon.png');
+	background-size: 12%;
+	background-position: 30px 13px;
+	background-repeat: no-repeat;
+}
+#ibk {
+	background: url('../images/icon/ibkIcon.png');
+	background-size: 15%;
+	background-position: 30px 13px;
+	background-repeat: no-repeat;
+}
+#hana {
+	background: url('../images/icon/hanaIcon.png');
+	background-size: 15%;
+	background-position: 30px 13px;
+	background-repeat:no-repeat;
+}
+
+/* button wrap */
+.btnWrap {
+	padding: 40px 0;
+    margin: 0 auto;
+}
+.btnWrap .leftBtnWrap .nextBtn {
+	margin-left: 10px;
+}
+
+/* button */
+.borderBigBtn {
+	height: 55px;
+    background-color: white;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.borderBigBtn:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+.bigBtn {
+	height: 55px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 18px;
+	transition: 0.3s;
+	padding: 0 20px;
+    cursor: pointer;
+}
+.bigBtn:hover {
+    background-color: dodgerblue;
+	color: white;
+	opacity: 0.8;
+}
+.borderMiddleBtn {
+	height: 50px;
+    background-color: white;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    padding: 0 20px;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.borderMiddleBtn:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+.middleBtn {
+	height: 50px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 0 20px;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.middleBtn:hover {
+    background-color: dodgerblue;
+	color: white;
+	opacity: 0.8;
+}
+.borderSmallBtn {
+    background-color: white;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    padding: 6px 15px;
+    font-size: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.borderSmallBtn:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+.smallBtn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 6px 15px;
+    font-size: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.smallBtn:hover {
+    background-color: dodgerblue;
+	color: white;
+	opacity: 0.8;
+}
+
+
+/* 페이징 버튼 */
+.pagingBtnArea{
+    margin-top: 30px;
+}
+.pagingBtnArea .pagingBtnWrap{
+    margin: 0 auto;
+    width: 197px;
+}
+.pagingBtnArea .pagingBtnWrap .pagingBtn{
+    width: 30px;
+    height: 30px;
+    margin: 6px;
+    border: 1px solid #eee;
+    color: #666;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+}
+.pagingBtnArea .pagingBtnWrap .pagingBtn:hover{
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* 커스텀 첨부파일 버튼 */
+.fileInput label {
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    color: #333;
+    line-height: 50px;
+    border: 1px solid black;
+}
+.fileInput label input {
+    position:absolute;
+    width:0;
+    height:0;
+    overflow:hidden;
+}
+.fileInput input[type=text] {
+	width: 473px;
+    margin-left: 20px;
+}
+
+
+/* 커스텀 체크박스 */
+.checkContainer input{
+	margin-right: 10px;
+}
+.checkContainer {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:10px 0 20px;
+}
+.checkContainer input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	background-color: white;
+	border-radius: 20px;
+	border: 2px solid dodgerblue;
+}
+.checkContainer:hover input ~ .checkmark {
+	border-radius: 20px;
+}
+.checkContainer input:checked ~ .checkmark {
+	background-color: dodgerblue;
+	border-radius: 20px;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.checkContainer input:checked ~ .checkmark:after {
+	display: block;
+}
+.checkContainer .checkmark:after {left: 6px;
+    top: 3px;
+    width: 3px;
+    height: 8px;
+    border: 1px solid white;
+    border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+}
+
+
+/* dropbox */
+select {
+	background: url(../images/selectmenuArrowGrey.png) no-repeat 90% 50%;
+	/* OS에 따라 폼요소들의 특징적인것을 초기화 시키는 작업 */
+    -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+    -moz-appearance: none; /* 화살표 없애기 for firefox*/
+    appearance: none; /* 화살표 없애기 공통*/
+    width: 200px;
+    border: 1px solid #ccc;
+    color: #999;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 0;
+}
+select::-ms-expand { /* IE를 처리하기 위한 코드 (호환성을 보장) */ 
+	display:none;
+}
+
+/* input */
+input {
+	outline: none;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+	border-image: initial;
+	font-size: 13px;
+}
+input[type='text'], 
+input[type='tel'], 
+input[type='email'], 
+input[type="date"], 
+input[type="month"], 
+input[type="number"], 
+input[type="search"], 
+input[type='password'] {
+	height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #eee;
+	line-height: 60px;
+	/* OS에 따라 폼요소들의 특징적인것을 초기화 시키는 작업 */
+    -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+    -moz-appearance: none; /* 화살표 없애기 for firefox*/
+    appearance: none; /* 화살표 없애기 공통*/
+}
+input:focus, textarea:focus{ 
+	border: 1px solid dodgerblue; 
+} 
+label, input, select, button {
+	background-color: transparent;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: none;
+}
+
+.scrollbar
+	{
+		margin-left: 30px;
+		height: 450px;
+		overflow-y: scroll;
+	}
+	
+	.force-overflow
+	{
+		min-height: 750px;
+	}
+
+/*
+ *  STYLE 7
+ */
+
+#style-7::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#style-7::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-7::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}

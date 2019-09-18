@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper 
+   namespace="account.model.AccountMapper">
+   
+   <resultMap type="Member" id="MemJoin">
+   	<id property="email" column="email"/>
+   	<result property="password" column="password"/>
+   	<result property="name" column="name"/>
+   	<result property="phone" column="phone"/>
+   	<result property="pernum" column="pernum"/>
+   	<collection property="accountList" ofType="Account">
+   		<id property="accnum" column="accnum"/>
+   		<result property="money" column="money"/>
+   		<result property="password" column="password"/>
+   		<result property="bankname" column="bankname"/>
+   		<result property="member_email" column="member_email"/> 
+   	</collection>
+   </resultMap>
+   
+   <select id="getAcccountList" parameterType="string" resultType="Account">
+   		select * from account where member_email = #{value:VARCHAR}
+   </select>
+   
+   <select id="myAccountInfo" parameterType="Account" resultMap="MemJoin">
+   		select * from member m, (select * from account where accnum = #{accnum} and password = #{password}) a
+		where m.email = a.member_email
+   </select> 
+   
+   <select id="yourAccountInfo" parameterType="Account" resultMap="MemJoin">
+		select *
+		from member m, (select * from account where accnum = #{accnum} and bankname = #{bankname}) a
+		where m.email = a.member_email
+   </select> 
+   <!-- 송금하는 내용.... -->
+   <update id="myMoneyUpdate" parameterType="Account">
+   		update account set money = money - #{money} where accnum = #{accnum}
+   </update>
+   
+   <update id="yourMoneyUpdate" parameterType="Account">
+   		update account set money = money + #{money} where accnum = #{accnum} and bankname = #{bankname}
+   </update>
+   
+   <update id="timelineInsert" parameterType="Timeline">
+   		insert into timeline values(timeline_seq.nextval, #{trader}, #{sentmoney:VARCHAR}, #{receivemoney:VARCHAR}, to_char(sysdate,'yy/mm/dd hh24:mi:ss'), #{account_accnum})
+   		<!-- insert into timeline values(timeline_seq.nextval, #{trader}, #{sentmoney:VARCHAR}, #{receivemoney:VARCHAR}, '19/08/08 14:22:51', #{account_accnum}) -->
+   </update>
+</mapper>

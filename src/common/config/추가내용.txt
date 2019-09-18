@@ -1,0 +1,6 @@
+
+
+
+## 1.login.jsp에서 action을 login.do로 바꿈
+
+###

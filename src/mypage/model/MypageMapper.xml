@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mypage.model.MypageMapper">
+	<select id="getMemberInfo" parameterType="string"
+		resultType="Member">
+		select * from member where email=#{value}
+	</select>
+
+	<update id="editMemberInfo" parameterType="Member">
+		update member set password = #{password}, name = #{name}, phone = #{phone}
+		where email=#{email}
+	</update>
+
+	<select id="getTimeline" parameterType="map"
+		resultType="Timeline">
+		select *
+		from timeline
+		where account_accnum
+		in (select accnum from account where member_email = #{email})
+		and
+		<if test="date == null">
+			substr(whentime,1,5) = to_char(sysdate,'yy/mm')
+		</if>
+		<if test="date != null and beforeYear == null">
+			substr(whentime,1,5) = #{date}
+		</if>
+		<if test="beforeYear != null">
+			TO_CHAR(TO_DATE(substr(whentime,1,2),'YY'),'YYYY') = #{beforeYear}
+		</if>
+		order by whenTime desc, timenum desc
+	</select>
+
+	<resultMap type="Account" id="AccountJoin">
+		<id property="accnum" column="accnum" />
+		<result property="money" column="money" />
+		<result property="password" column="password" />
+		<result property="bankname" column="bankname" />
+		<result property="pernum" column="pernum" />
+		<collection property="accountDetail" resultMap="AccountDetail"/>
+	</resultMap>
+	
+	<resultMap type="AccountDetail" id="AccountDetail">
+		<id property="accdetailnum" column="accdetailnum" />
+		<result property="acctype" column="acctype" />
+		<result property="paymentamount" column="paymentamount" />
+		<result property="apr" column="apr" />
+		<result property="paymonth" column="paymonth" />
+		<result property="paymentday" column="paymentday" />
+		<result property="maturitydate" column="maturitydate" />
+		<result property="lastpaymentdate" column="lastpaymentdate" />
+		<result property="account_accnum" column="account_accnum" />
+	</resultMap>
+
+	<select id="getAccountList" parameterType="string" resultMap="AccountJoin">
+		select *
+		from account, accountdetail
+		where member_email = #{value} and accnum
+		= account_accnum
+	</select>
+	
+</mapper>

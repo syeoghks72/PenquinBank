@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper 
+   namespace="notice.model.NoticeMapper">
+   
+	<!-- [1]글쓰기 -->
+    <insert id="insertNotice"  parameterType="notice.model.NoticeVO">
+    	<selectKey keyProperty="nnum" resultType="string" order="BEFORE">
+    		select notice_seq.nextval from dual
+    	</selectKey>        	
+        	insert into notice values(#{nnum},#{title},#{contents},0,sysdate,#{member_email:VARCHAR})
+
+    </insert>
+    <insert id="insertFileInfo"  parameterType="FileInfo">
+    	<selectKey keyProperty="fnum" resultType="string" order="BEFORE">
+    		select fileinfo_seq.nextval from dual
+    	</selectKey>
+        	insert into fileinfo values(#{fnum:VARCHAR},#{fname},#{fsize},#{fplace:VARCHAR},#{notice_nnum})        	
+     </insert>
+    
+    <!-- [2] 글 목록 관련 (게시글 수 가져오기)  select는 반드시 resultType을 지정해야한다.-->
+    <select id="getTotalCount" 
+    resultType="int" >
+    	select count(nnum) from notice
+    </select>
+<!-- [2] 글목록 가져오기 select문은 반드시 resultType을 기술해야 한다.
+		이 때 ArrayList로 가져오더라도 resultType에는 VO객체의 타입을 기술한다.
+		글 목록을 가져올 때 해당하는 글의 댓글수도 같이 가져와 보여주자.
+		그러려면 NoticeVO에 댓글수를 담아줄 프로퍼티가 필요하다.
+		-->
+	<select id="listNotice" resultType="Notice" parameterType="map">
+			select * from (
+				select rownum rn, n.* from
+					(select notice.* from notice order by nnum desc) n
+ 		     )
+  				where rn between #{start} and #{end}
+	</select>  
+	 <!--[3] 조회수 증가    #파라미터가 2개이상이상 map을 이용하거나 VO에서 처리함#-->
+   <update id="updateReadnum" parameterType="string">
+   	update notice set vnum = vnum+1 where nnum=#{value}
+   </update> 
+   
+   <!-- [4]게시글 내용 가져오기 (select문은 반드시 resultType을 지정한다.)-->
+   <select id="getNotice" resultType="Notice" parameterType="string">
+   	 select  a.*, b.*
+ 	from notice a left outer join fileinfo b
+ 	on a.nnum=b.notice_nnum 
+ 	where a.nnum=#{nnum}
+   </select>
+   <select id="getFileList" resultType="FileInfo" parameterType="string">
+   	select * from fileinfo where notice_nnum=#{nnum}
+   </select>
+     <select id="getFileInfo" resultType="FileInfo" parameterType="string">
+   	select * from fileinfo where notice_nnum=#{nnum}
+   </select>
+   
+   
+   
+   <!-- 삭제 시 둘다 같이 삭제되야함  -->
+   <!-- [5]게시글 삭제 -->
+   <delete id="deleteNotice" parameterType="string">
+   	delete from notice where nnum=#{nnum}
+   </delete>
+   
+   <delete id="deleteFileInfo" parameterType="string">
+   	delete from fileinfo where notice_nnum=#{nnum}
+   </delete>
+   
+   
+   <!-- 수정 시 notice와 fileinfo둘다 수정해야함  -->
+   <!--[6] 게시글 수정  -->
+   <update id="updateNotice" parameterType="Notice">
+   update notice set title=#{title},contents=#{contents} where nnum=#{nnum}   		
+   		<!-- <if test="fname!=null and fname!=''">
+   		, filename=#{fname:VARCHAR}, filesize=#{fsize:VARCHAR}
+   		</if>
+   		where nnum=#{nnum} -->
+   </update>
+   
+  <update id="updateFileInfo" parameterType="Fileinfo">
+   update fileinfo set fname=#{fname:VARCHAR}, fsize=#{fsize:NUMERIC}
+   where notice_nnum=#{notice_nnum}
+   </update> 
+   
+   
+</mapper>

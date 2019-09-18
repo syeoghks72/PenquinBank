@@ -1,0 +1,390 @@
+@charset "utf-8";
+
+/* 헤더 */
+#headerWrap {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	background-color: white;
+	border-bottom: 1px solid #eee;
+	z-index: 999;
+}
+#headerWrap #headerContainer{
+	height: 34px;
+    padding: 2px 0;
+}
+#headerWrap #headerContainer #headerTop {
+	height:36px;
+}
+#headerWrap #headerContainer #headerTop button {
+	border: 1px solid #eee;
+	padding: 3px 16px;
+	font-size: 12px;
+	margin: 6px 4px;
+	float: right;
+	display: inline-block;
+	border-radius: 2px;
+}
+#headerWrap #headerContainer #headerTop #sendMoney {
+   	background-color: dodgerblue;
+    color: white;
+	float: left;
+    border-radius: 2px;
+}
+#headerWrap #header {
+	border-top: 1px solid #eee;
+	background-color: white;
+}
+#headerWrap #header #logoWrap {
+	margin: 20px 0;
+	display: inline-block;
+}
+#headerWrap #header #logoWrap #mainLogo {
+	display: inline-block;
+}
+#headerWrap #header #logoWrap span {
+	padding-left: 20px;
+	color: #666;
+	font-size: 13px;
+	float: right;
+	padding-top: 4px;
+}
+
+
+/* 실시간 인기 검색어 */
+#PopularSaearch {
+	margin: 18px 0;
+}
+#PopularSaearch span{
+	padding: 6px 0;
+}
+#PopularSaearch #searchRolling {
+	padding: 5px 20px;
+    height: 20px;
+    overflow: hidden;
+    background: white;
+    font-size: 14px;
+}
+#PopularSaearch #searchRolling ul#searchTicker,
+#PopularSaearch #searchRolling ul#searchTicker li {
+	margin: 0; 
+	padding: 0; 
+	list-style: none;
+}
+#PopularSaearch #searchRolling ul#searchTicker li a {
+	display: block; 
+	height: 20px; 
+	line-height: 20px; 
+	color: #333; 
+	text-decoration: none;
+}
+#PopularSaearch #searchRolling ul#searchTicker li span {
+	padding: 10px; 
+	font-size: 16px;
+	color: black; 
+	font-weight: bold; 
+	margin-right: 5px;
+}
+
+
+/* 네비게이션 */
+.zeta-menu li {
+	float: left;
+	position: relative;
+	color: black;
+}
+.zeta-menu li:hover { 
+	background: white;
+ }
+.zeta-menu li:hover>a { 
+	color: dodgerblue;
+}
+.zeta-menu a {
+	color: black;
+    display: block;
+    padding: 10px 35px;
+    font-size: 16px;
+}
+.zeta-menu ul {
+	background-color: white;
+	border: 1px solid dodgerblue;
+	display: none;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 240px;
+}
+.zeta-menu ul li { 
+	float: none; 
+}
+.zeta-menu ul li:hover { 
+	background: #ecf5ff; 
+}
+.zeta-menu ul li:hover a { 
+	color: black;
+}
+.zeta-menu ul a { 
+	color: black;
+    font-size: 15px;
+}
+.zeta-menu ul ul { 
+	left: 100%; top: 0; 
+}
+
+/* 메인 하단 배너 */
+#appDownloadBanner .bannerWrap{
+	background-color: #8a94a9;
+	height: 120px;
+}
+#appDownloadBanner .bannerWrap h4{
+	color: white;
+	font-size: 20px;
+	padding: 50px;
+}
+#appDownloadBanner .bannerWrap .bannerBtn {
+	margin: 40px;
+}
+#appDownloadBanner .bannerWrap img {
+	margin-right: 10px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+
+/* 자주묻는 질문 */
+
+#faqSection .searchWrap {
+	margin: 0 0 40px;
+}
+#faqSection #keyword {
+	width: 629px;
+    margin-right: 10px;
+	border: 1px solid black;
+}
+
+/* 회원가입 */
+#joinSection #joinForm #inputForm #userJumin,
+#joinSection #joinForm #inputForm #userJuminBack {
+	width: 204px;
+}
+
+
+/* 송금하기*/
+#sendMoneySection .formWrap {
+	width: 50%;
+	margin: 0 auto;
+}
+#sendMoneySection #sendMoneyBtn,
+#sendMoneySection #han_money {
+	margin-top: 20px;
+}
+#sendMoneySection .bankBtn {
+	width: 171px;
+    margin-right: 10px;
+	
+}
+#sendMoneySection .bankBtn img {
+	width: auto;
+	height: 20px;
+}
+#sendMoneySection .boxRecord {
+	margin-bottom: 20px;
+}
+
+/* 로그인 */
+#loginSection .logoArea {
+	width: 250px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+/* 마이페이지 */
+#myinfoSection #userPhone {
+	width: 643px;
+    margin-right: 10px;
+}
+#myinfoSection #userPhoneChange {
+	width: 573px;
+	margin-right: 10px;
+	border: none;
+}
+#myinfoSection #userPwdChange {
+	width: 613px;
+    margin-right: 10px;
+}
+    
+
+/* 조회 */
+#lookupSection .textBox {
+	padding: 15px 0;
+}
+#lookupSection .btnWrap {
+	padding: 20px 0;
+	
+}
+
+
+/* 타임라인 */
+#timelineSection .datepicker-here {
+	width: 643px;
+    margin-right: 10px;
+}
+
+/* 공지사항 수정하기 */
+#noticeWriteSection #rewrite,
+#noticeWriteSection #rewrite{
+	margin-right: 10px;
+}
+
+
+/* 이벤트 */
+#eventSection .boxRecord {
+	height: 330px;
+}
+#eventSection .box {
+	width: 50%;
+    display: inline-block;
+    border: none;
+}
+
+
+/* 이벤트 세부페이지 */
+
+
+/* 민원접수 */
+#complaintsReceivedSection .tabContentWrap .tabContent .bigPoint {
+	padding: 50px;
+}
+#complaintsReceivedSection .tabContentWrap .tabContent .loginWrap {
+	width:100%;
+	height:300px;
+	border:1px solid #eee;
+}
+#complaintsReceivedSection .tabContentWrap .tabContent .loginWrap img {
+	display: block;
+	margin: 0 auto;
+	padding: 20px;
+}
+#complaintsReceivedSection .tabContentWrap .tabContent .loginWrap .loginBox {
+	padding: 47px 0;
+}
+#complaintsReceivedSection .tabContentWrap .tabContent .loginWrap .login{
+	float: left;
+    width: 50%;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+}
+#complaintsReceivedSection .tabContentWrap .tabContent .loginWrap .nonLogin{
+	float: right;
+	width: 50%;
+}
+#complaintsReceivedSection .tabContentWrap .tabContent .loginWrap .loginBox .linkLogin {
+	display: block;
+	font-size:20px;
+	text-align: center;
+	color: #333;
+	font-weight: bold;
+	padding: 10px;
+}
+
+
+/* 전체상품 */
+#productGuidanceSection .boxRecord {
+	height: 330px;
+}
+#productGuidanceSection .box {
+	width: 223px;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    padding: 20px;
+    margin-right: 40px;
+	height: 300px;
+	box-sizing: border-box;
+	background-color: rgb(236, 245, 255);
+}
+#productGuidanceSection .lastBox {
+	margin-right: 0;
+}
+
+
+/* 이용가이드 */
+#userGuideSection .tabContent {
+	padding-top: 40px;
+} 
+
+/* 한줄 공지사항 */
+#noticeRollingContainer {
+	border-top:  1px solid #eee;
+	padding: 20px;
+	background-color: white;
+}
+#noticeRollingContainer #noticeRolling {
+	width: 1080px;
+	height: 30px;
+    overflow: hidden;
+}
+#noticeRollingContainer #noticeRolling #noticeTicker{
+	float:left;
+	width:50%;
+}
+#noticeRollingContainer #noticeRolling ul, 
+#noticeRollingContainer #noticeRolling li {
+	margin:0; 
+	padding:0;
+}
+#noticeRollingContainer #noticeRolling li a {
+	display:block; 
+	height:20px; 
+	line-height:35px;
+}
+
+/* 푸터 */
+#footer {
+	position: relative;
+	background-color: #1e1e1e;
+	padding: 30px 0 50px;
+	width: 100%;
+}
+#footer #footerTop, 
+#footer #footerBottom {
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#footer #footerTop ul, 
+#footer #footerBottom ul {
+	overflow: hidden;
+	display: inline-block;
+}
+#footer #footerTop ul li, 
+#footer #footerBottom ul li {
+	float: left;
+	padding: 10px;
+}
+#footer #footerTop ul li a, 
+#footer #footerBottom ul li a {
+	color: #ccc;
+}
+#footer #footerTop ul li:first-child {
+	padding-left: 0;
+}
+#footer #footerTop ul li.pointColor {
+	color: white;
+}
+#footer #footerBottom ul li:first-child {
+	padding-left: 0;
+}
+#footer #footerBottom p {
+	color: #999;
+	font-size: 12px;
+	padding-top: 10px;
+	line-height: 20px;
+}
+#footer #footerBottom #copyright {
+	color: #999;
+	padding-top: 10px;
+}
+
+
+/* 그룹사 사이트 */

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* 테이블 공통 */
+.tableWrap {
+	margin: 0 auto;
+}
+.tableHeader {
+    color: #333;
+}
+table {
+	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+	border: 1px solid #eee;
+	background-color: white;
+}
+table th {
+    background-color:#f4f4f4;
+    padding: 15px;
+    vertical-align: middle;
+    border-top: 1px solid black;
+	font-size: 16px;
+	color: #333;
+}
+table tr {
+	border-top: 1px solid black;
+	border-bottom: 1px solid #eee;
+}
+
+table td {
+	padding: 30px;
+	transition: 0.3s;
+	border: 1px solid #eee;
+	text-align: center;
+    vertical-align: middle;
+}
+
+/* 공지사항 테이블 */
+#noticeSection .tableWrap .table {
+	border: none;
+}
+#noticeSection .tableWrap .table th {
+	border: none;
+}
+#noticeSection .tableWrap .table tr td:first-child,
+#noticeSection .tableWrap .table tr td:nth-child(3),
+#noticeSection .tableWrap .table tr td:last-child {
+	width: 70px;
+}
+#noticeSection .tableWrap .table tr td:nth-child(2) {
+    text-align: left;
+}
+
+#noticeSection .tableWrap .table td {
+	border: none;
+	border-bottom: 1px solid #eee;
+}
+
+/* 세부페이지 테이블 */
+#noticeDetailSection .tableWrap .table {
+	text-align:left;
+	border: none;
+    border-top: 1px solid black;
+    
+}
+#noticeDetailSection .tableWrap .table tr {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#noticeDetailSection .tableWrap .table tr th,
+#eventDetailSection .tableWrap .table tr th {
+    background-color: #fff;
+    padding: 30px;
+    border: none;
+}
+#noticeDetailSection .tableWrap .table tr .date {
+    width: 70px;
+}
+#noticeDetailSection .tableWrap .table tr td {
+	text-align:left;
+	border: none;
+}
+#noticeDetailSection .fileWrap img {
+	vertical-align: middle;
+    width: 20px;
+}
+#noticeDetailSection .fileWrap a.fileName,
+#noticeDetailSection .fileWrap a.fileSize {
+	font-size: 12px; 
+	color: #999;
+}
+#noticeDetailSection .fileWrap a:hover {
+	text-decoration: underline;
+}
+
+/* 공지사항 글쓰기 테이블 */
+#noticeWriteSection .tableHeader {
+	width: 120px;
+	
+}
